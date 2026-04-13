@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Geo Game Autoplay",
+  "version": "1.0",
+  "description": "Auto-plays the World Geography Game",
+  "content_scripts": [{
+    "matches": ["*://world-geography-games.com/*"],
+    "js": ["content_script.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }],
+  "web_accessible_resources": [{
+    "resources": ["inject.js"],
+    "matches": ["*://world-geography-games.com/*"]
+  }]
+}
