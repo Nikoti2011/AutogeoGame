@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { width: 260px; padding: 12px; font-family: sans-serif; font-size: 13px; }
+  h2 { margin-bottom: 10px; }
+  .row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  label { display: flex; justify-content: space-between; width: 100%; }
+</style>
+</head>
+<body>
+  <h2>Geo Autoplay</h2>
+
+  <div class="row">
+    <label>Enabled <input type="checkbox" id="enabled" checked></label>
+  </div>
+  <div class="row">
+    <label>Zoom to country <input type="checkbox" id="zoom"></label>
+  </div>
+  <div class="row">
+    <label>Natural zoom <input type="checkbox" id="naturalZoom"></label>
+  </div>
+  <div class="row">
+    <label>Highlight only (no auto-click) <input type="checkbox" id="highlightOnly"></label>
+  </div>
+  <div class="row">
+    <label>Auto-skip intro <input type="checkbox" id="autoskip" checked></label>
+  </div>
+  <div class="row">
+    <label>Speed (ms)
+      <span><input type="range" id="speed" min="100" max="2000" step="100" value="800"> <span id="speedVal">800ms</span></span>
+    </label>
+  </div>
+  <div class="row">
+    <label>Wrong limit
+      <span><input type="range" id="wrongLimit" min="0" max="10" step="1" value="0"> <span id="wrongVal">off</span></span>
+    </label>
+  </div>
+  <div class="row">
+    <label>Zoom level
+      <span><input type="range" id="zoomLevel" min="0.1" max="2.5" step="0.1" value="1.2"> <span id="zoomVal">1.2x</span></span>
+    </label>
+  </div>
+
+  <div id="status">not on game page</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
